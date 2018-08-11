@@ -1,0 +1,398 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A89BEC5208D751F00044288 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A89BEC4208D751F00044288 /* AppDelegate.swift */; };
+		5A89BEC7208D751F00044288 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A89BEC6208D751F00044288 /* ViewController.swift */; };
+		5A89BECA208D751F00044288 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A89BEC8208D751F00044288 /* Main.storyboard */; };
+		5A89BECC208D752000044288 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A89BECB208D752000044288 /* Assets.xcassets */; };
+		5A89BECF208D752000044288 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A89BECD208D752000044288 /* LaunchScreen.storyboard */; };
+		B109C4F1405E1B8C12A56034 /* Pods_SignalRChatPhoneTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CDFF61984DE871D6498787 /* Pods_SignalRChatPhoneTest.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		15287129D26B3FA8A25CB4F8 /* Pods-SignalRChatPhoneTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignalRChatPhoneTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SignalRChatPhoneTest/Pods-SignalRChatPhoneTest.debug.xcconfig"; sourceTree = "<group>"; };
+		5A89BEC1208D751F00044288 /* SignalRChatPhoneTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignalRChatPhoneTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A89BEC4208D751F00044288 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5A89BEC6208D751F00044288 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5A89BEC9208D751F00044288 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5A89BECB208D752000044288 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5A89BECE208D752000044288 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5A89BED0208D752000044288 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		961F6FEE01716DE3A7E1D126 /* Pods-SignalRChatPhoneTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignalRChatPhoneTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-SignalRChatPhoneTest/Pods-SignalRChatPhoneTest.release.xcconfig"; sourceTree = "<group>"; };
+		B5CDFF61984DE871D6498787 /* Pods_SignalRChatPhoneTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignalRChatPhoneTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A89BEBE208D751F00044288 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B109C4F1405E1B8C12A56034 /* Pods_SignalRChatPhoneTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		007B3939433619A6680497CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				15287129D26B3FA8A25CB4F8 /* Pods-SignalRChatPhoneTest.debug.xcconfig */,
+				961F6FEE01716DE3A7E1D126 /* Pods-SignalRChatPhoneTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4757B0CB03A50078E5A44C6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5CDFF61984DE871D6498787 /* Pods_SignalRChatPhoneTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A89BEB8208D751F00044288 = {
+			isa = PBXGroup;
+			children = (
+				5A89BEC3208D751F00044288 /* SignalRChatPhoneTest */,
+				5A89BEC2208D751F00044288 /* Products */,
+				007B3939433619A6680497CD /* Pods */,
+				4757B0CB03A50078E5A44C6C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5A89BEC2208D751F00044288 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A89BEC1208D751F00044288 /* SignalRChatPhoneTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5A89BEC3208D751F00044288 /* SignalRChatPhoneTest */ = {
+			isa = PBXGroup;
+			children = (
+				5A89BEC4208D751F00044288 /* AppDelegate.swift */,
+				5A89BEC6208D751F00044288 /* ViewController.swift */,
+				5A89BEC8208D751F00044288 /* Main.storyboard */,
+				5A89BECB208D752000044288 /* Assets.xcassets */,
+				5A89BECD208D752000044288 /* LaunchScreen.storyboard */,
+				5A89BED0208D752000044288 /* Info.plist */,
+			);
+			path = SignalRChatPhoneTest;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5A89BEC0208D751F00044288 /* SignalRChatPhoneTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A89BED3208D752000044288 /* Build configuration list for PBXNativeTarget "SignalRChatPhoneTest" */;
+			buildPhases = (
+				67CB1B499A02218B96FC6209 /* [CP] Check Pods Manifest.lock */,
+				5A89BEBD208D751F00044288 /* Sources */,
+				5A89BEBE208D751F00044288 /* Frameworks */,
+				5A89BEBF208D751F00044288 /* Resources */,
+				7A6D64817A5310D2F928D96E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SignalRChatPhoneTest;
+			productName = SignalRChatPhoneTest;
+			productReference = 5A89BEC1208D751F00044288 /* SignalRChatPhoneTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5A89BEB9208D751F00044288 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Pawel Kadluczka";
+				TargetAttributes = {
+					5A89BEC0208D751F00044288 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 5A89BEBC208D751F00044288 /* Build configuration list for PBXProject "SignalRChatPhoneTest" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5A89BEB8208D751F00044288;
+			productRefGroup = 5A89BEC2208D751F00044288 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5A89BEC0208D751F00044288 /* SignalRChatPhoneTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5A89BEBF208D751F00044288 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A89BECF208D752000044288 /* LaunchScreen.storyboard in Resources */,
+				5A89BECC208D752000044288 /* Assets.xcassets in Resources */,
+				5A89BECA208D751F00044288 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		67CB1B499A02218B96FC6209 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SignalRChatPhoneTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A6D64817A5310D2F928D96E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SignalRChatPhoneTest/Pods-SignalRChatPhoneTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftSignalRClient/SwiftSignalRClient.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSignalRClient.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SignalRChatPhoneTest/Pods-SignalRChatPhoneTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A89BEBD208D751F00044288 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A89BEC7208D751F00044288 /* ViewController.swift in Sources */,
+				5A89BEC5208D751F00044288 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5A89BEC8208D751F00044288 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A89BEC9208D751F00044288 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5A89BECD208D752000044288 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A89BECE208D752000044288 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5A89BED1208D752000044288 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5A89BED2208D752000044288 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5A89BED4208D752000044288 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15287129D26B3FA8A25CB4F8 /* Pods-SignalRChatPhoneTest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SignalRChatPhoneTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = moozzyk.SignalRChatPhoneTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5A89BED5208D752000044288 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 961F6FEE01716DE3A7E1D126 /* Pods-SignalRChatPhoneTest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SignalRChatPhoneTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = moozzyk.SignalRChatPhoneTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5A89BEBC208D751F00044288 /* Build configuration list for PBXProject "SignalRChatPhoneTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A89BED1208D752000044288 /* Debug */,
+				5A89BED2208D752000044288 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A89BED3208D752000044288 /* Build configuration list for PBXNativeTarget "SignalRChatPhoneTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A89BED4208D752000044288 /* Debug */,
+				5A89BED5208D752000044288 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5A89BEB9208D751F00044288 /* Project object */;
+}
