@@ -11,7 +11,7 @@ import SwiftSignalRClient
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // Update the Url accordingly
-    private let serverUrl = "http://192.168.0.109:5000/chat"
+    private let serverUrl = "http://192.168.0.14:5000/chat"
     private let dispatchQueue = DispatchQueue(label: "hubsamplephone.queue.dispatcheueuq")
 
     var chatHubConnection: HubConnection?
@@ -36,7 +36,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.name = alert.textFields?.first?.text ?? "John Doe"
 
             self.chatHubConnectionDelegate = ChatHubConnectionDelegate(controller: self)
-            self.chatHubConnection = HubConnection(url: URL(string: self.serverUrl)!)
+            self.chatHubConnection = HubConnectionBuilder(url: URL(string: self.serverUrl)!)
+                .withLogging(minLogLevel: .debug)
+                .build()
+
             self.chatHubConnection!.delegate = self.chatHubConnectionDelegate
             self.chatHubConnection!.on(method: "NewMessage", callback: {args, typeConverter in
                 let user = try! typeConverter.convertFromWireType(obj: args[0], targetType: String.self)
