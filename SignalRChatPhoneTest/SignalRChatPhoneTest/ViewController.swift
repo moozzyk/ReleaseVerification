@@ -11,7 +11,7 @@ import SwiftSignalRClient
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // Update the Url accordingly
-    private let serverUrl = "http://192.168.0.106:5000/chat"
+    private let serverUrl = "http://192.168.0.119:5000/chat"
     private let dispatchQueue = DispatchQueue(label: "hubsamplephone.queue.dispatcheueuq")
 
     var chatHubConnection: HubConnection?
@@ -41,11 +41,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 .build()
 
             self.chatHubConnection!.delegate = self.chatHubConnectionDelegate
-            self.chatHubConnection!.on(method: "NewMessage", callback: {args, typeConverter in
-                let user = try! typeConverter.convertFromWireType(obj: args[0], targetType: String.self)
-                let message = try! typeConverter.convertFromWireType(obj: args[1], targetType: String.self)
-                self.appendMessage(message: "\(user!): \(message!)")
-            })
+            self.chatHubConnection!.on(method: "NewMessage") {(user: String, message: String) in
+                self.appendMessage(message: "\(user): \(message)")
+            }
             self.chatHubConnection!.start()
 
         }
@@ -64,12 +62,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBAction func btnSend(_ sender: Any) {
         let message = msgTextField.text
         if message != "" {
-            chatHubConnection?.invoke(method: "Broadcast", arguments: [name, message], invocationDidComplete:
-                {error in
-                    if let e = error {
-                        self.appendMessage(message: "Error: \(e)")
-                    }
-            })
+            chatHubConnection?.invoke(method: "Broadcast", name, message) { error in
+                if let e = error {
+                    self.appendMessage(message: "Error: \(e)")
+                }
+            }
             msgTextField.text = ""
         }
     }
