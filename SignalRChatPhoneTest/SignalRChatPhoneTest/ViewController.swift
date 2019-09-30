@@ -30,7 +30,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        let alert = UIAlertController(title: "Enter your Name", message:"", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Enter your Name", message:"", preferredStyle: UIAlertController.Style.alert)
         alert.addTextField() { textField in textField.placeholder = "Name"}
         let OKAction = UIAlertAction(title: "OK", style: .default) { action in
             self.name = alert.textFields?.first?.text ?? "John Doe"
@@ -38,6 +38,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.chatHubConnectionDelegate = ChatHubConnectionDelegate(controller: self)
             self.chatHubConnection = HubConnectionBuilder(url: URL(string: self.serverUrl)!)
                 .withLogging(minLogLevel: .debug)
+                .withHttpConnectionOptions() { options in options.skipNegotiation = true}
                 .build()
 
             self.chatHubConnection!.delegate = self.chatHubConnectionDelegate
@@ -122,13 +123,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 }
 
 class ChatHubConnectionDelegate: HubConnectionDelegate {
+
     weak var controller: ViewController?
 
     init(controller: ViewController) {
         self.controller = controller
     }
 
-    func connectionDidOpen(hubConnection: HubConnection!) {
+    func connectionDidOpen(hubConnection: HubConnection) {
         controller?.connectionDidOpen()
     }
 
