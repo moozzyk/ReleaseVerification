@@ -1,21 +1,16 @@
 PODS:
-  - SwiftSignalRClient (0.6.1)
+  - SwiftSignalRClient (0.6.2)
 
 DEPENDENCIES:
-  - SwiftSignalRClient (from `https://github.com/moozzyk/SignalR-Client-Swift`)
+  - SwiftSignalRClient (~> 0.6.2)
 
-EXTERNAL SOURCES:
-  SwiftSignalRClient:
-    :git: https://github.com/moozzyk/SignalR-Client-Swift
-
-CHECKOUT OPTIONS:
-  SwiftSignalRClient:
-    :commit: b76c497790a610de6679cba15ee9dcf6667abccc
-    :git: https://github.com/moozzyk/SignalR-Client-Swift
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SwiftSignalRClient
 
 SPEC CHECKSUMS:
-  SwiftSignalRClient: d463a8171a12a2c9c99986affb8718bf8ad97201
+  SwiftSignalRClient: c6a7341d28d58d65e820fff2680efb16b711e9be
 
-PODFILE CHECKSUM: 3c320052052804f6b07fd2808d125a3598380565
+PODFILE CHECKSUM: 2411eb323ea23d474cf9fcf08a282a51a764c4a3
 
 COCOAPODS: 1.7.5
