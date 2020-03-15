@@ -4,6 +4,6 @@ platform :ios, '11.0'
 target 'SignalRChatPhoneTest' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  pod 'SwiftSignalRClient', '~> 0.6.2'
+  pod 'SwiftSignalRClient', '~> 0.6.3'
 #  pod 'SwiftSignalRClient', :git => 'https://github.com/moozzyk/SignalR-Client-Swift'
 end
