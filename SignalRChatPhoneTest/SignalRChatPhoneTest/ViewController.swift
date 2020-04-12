@@ -11,13 +11,14 @@ import SwiftSignalRClient
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // Update the Url accordingly
-    private let serverUrl = "http://192.168.0.119:5000/chat"
+    private let serverUrl = "http://192.168.0.110:5000/chat"
     private let dispatchQueue = DispatchQueue(label: "hubsamplephone.queue.dispatcheueuq")
 
-    var chatHubConnection: HubConnection?
-    var chatHubConnectionDelegate: ChatHubConnectionDelegate?
-    var name = ""
-    var messages: [String] = []
+    private var chatHubConnection: HubConnection?
+    private var chatHubConnectionDelegate: ChatHubConnectionDelegate?
+    private var name = ""
+    private var messages: [String] = []
+    private var reconnectAlert: UIAlertController?
 
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var chatTableView: UITableView!
@@ -39,6 +40,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.chatHubConnection = HubConnectionBuilder(url: URL(string: self.serverUrl)!)
                 .withLogging(minLogLevel: .debug)
                 .withHttpConnectionOptions() { options in options.skipNegotiation = true}
+                .withAutoReconnect()
                 .build()
 
             self.chatHubConnection!.delegate = self.chatHubConnectionDelegate
@@ -88,12 +90,33 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     fileprivate func connectionDidFailToOpen(error: Error) {
-        appendMessage(message: "Connection failed to start. Error \(error)")
-        toggleUI(isEnabled: false)
+        blockUI(message: "Connection failed to start.", error: error)
     }
 
     fileprivate func connectionDidClose(error: Error?) {
-        var message = "Connection closed."
+        if let alert = reconnectAlert {
+            alert.dismiss(animated: true, completion: nil)
+        }
+        blockUI(message: "Connection is closed.", error: error)
+    }
+
+    fileprivate func connectionWillReconnect(error: Error?) {
+        guard reconnectAlert == nil else {
+            print("Alert already present. This is unexpected.")
+            return
+        }
+
+        reconnectAlert = UIAlertController(title: "Reconnecting...", message: "Please wait", preferredStyle: .alert)
+        self.present(reconnectAlert!, animated: true, completion: nil)
+    }
+
+    fileprivate func connectionDidReconnect() {
+        reconnectAlert?.dismiss(animated: true, completion: nil)
+        reconnectAlert = nil
+    }
+
+    func blockUI(message: String, error: Error?) {
+        var message = message
         if let e = error {
             message.append(" Error: \(e)")
         }
@@ -140,5 +163,13 @@ class ChatHubConnectionDelegate: HubConnectionDelegate {
 
     func connectionDidClose(error: Error?) {
         controller?.connectionDidClose(error: error)
+    }
+
+    func connectionWillReconnect(error: Error) {
+        controller?.connectionWillReconnect(error: error)
+    }
+
+    func connectionDidReconnect() {
+        controller?.connectionDidReconnect()
     }
 }
