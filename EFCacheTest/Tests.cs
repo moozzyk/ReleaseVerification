@@ -292,7 +292,7 @@ namespace EFCache
             using (var ctx = new MyContext())
             {
                 var q = ctx.Entities.Where(e => e.Flag != null).OrderBy(e => e.Id).NotCached();
-                Assert.True(BlacklistedQueriesRegistrar.Instance.IsQueryBlacklisted(
+                Assert.True(BlockedQueriesRegistrar.Instance.IsQueryBlocked(
                     ((IObjectContextAdapter)ctx).ObjectContext.MetadataWorkspace, q.ToString()));
                 q.ToList();
                 Assert.DoesNotContain(Cache.CacheDictionary.Keys, k => k.Contains(q.ToString()));
@@ -312,7 +312,7 @@ namespace EFCache
         WHERE [Extent1].[Flag] IS NOT NULL
     )  AS [GroupBy1]";
 
-                BlacklistedQueriesRegistrar.Instance.AddBlacklistedQuery(
+                BlockedQueriesRegistrar.Instance.AddBlockedQuery(
                     ((IObjectContextAdapter)ctx).ObjectContext.MetadataWorkspace, query);
 
                 ctx.Entities.Count(e => e.Flag != null);
