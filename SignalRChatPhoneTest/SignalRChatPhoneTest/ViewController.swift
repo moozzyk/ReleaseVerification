@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 import SwiftSignalRClient
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -40,6 +41,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.chatHubConnection = HubConnectionBuilder(url: URL(string: self.serverUrl)!)
                 .withLogging(minLogLevel: .debug)
                 .withHttpConnectionOptions() { options in options.skipNegotiation = true}
+                .withHubConnectionOptions() { options in
+                    options.keepAliveInterval = 15
+                    options.callbackQueue = DispatchQueue.main
+                }
                 .withAutoReconnect()
                 .build()
 
