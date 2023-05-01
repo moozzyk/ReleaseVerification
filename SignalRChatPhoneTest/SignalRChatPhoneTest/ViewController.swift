@@ -53,7 +53,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.appendMessage(message: "\(user): \(message)")
             }
             self.chatHubConnection!.start()
-
         }
         alert.addAction(OKAction)
         self.present(alert, animated: true)
