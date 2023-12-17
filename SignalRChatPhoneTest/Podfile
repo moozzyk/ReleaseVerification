@@ -5,7 +5,7 @@ target 'SignalRChatPhoneTest' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 # `pod repo update` before updating
-  pod 'SwiftSignalRClient', '~> 1.0.0'
+  pod 'SwiftSignalRClient', '~> 1.1.0'
 # `pod update --clean-install`
 #  pod 'SwiftSignalRClient', :git => 'https://github.com/moozzyk/SignalR-Client-Swift'
 end
